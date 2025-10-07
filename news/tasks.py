@@ -3,7 +3,7 @@ from django.utils import timezone
 from time import mktime
 from .models import Source, Article
 from celery import shared_task
-from datatime import datetime
+from datetime import datetime
 
 
 def _entry_published(entry):

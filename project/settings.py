@@ -60,7 +60,7 @@ WSGI_APPLICATION = 'project.wsgi.application'
 env = Env()
 env.read_env()
 
-CELERY_BROKER_URL = env('REDIS_URL', default='redis://localhost:6379/0')
+CELERY_BROKER_URL = 'redis://redis:6379/0'
 CELERY_RESULT_BACKEND = CELERY_BROKER_URL
 CELERY_BEAT_SCHEDULE = {
     'fetch-every-15-minutes': {
